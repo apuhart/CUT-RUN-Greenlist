@@ -1,47 +1,73 @@
 # CUT&RUN Analysis Repository
 
-This GitHub repository is dedicated to performing **CUT&RUN (Cleavage Under Targets & Release Using Nuclease)** analysis using the **Greenlist normalization** approach. This method is based on the work described in the paper:
 
-**Fabio N de Mello, Ana C Tahira, Maria Gabriela Berzoti-Coelho, Sergio Verjovski-Almeida**  
-_The CUT&RUN greenlist: genomic regions of consistent noise are effective normalizing factors for quantitative epigenome mapping_  
-**Briefings in Bioinformatics, Volume 25, Issue 2, March 2024**, bbad538  
-[DOI: 10.1093/bib/bbad538](https://doi.org/10.1093/bib/bbad538)
+"""
+This GitHub repository is dedicated to performing CUT&RUN (Cleavage Under Targets & Release Using Nuclease) analysis using the Greenlist normalization approach. This method is based on the work described in the paper:
 
+
+Fabio N de Mello, Ana C Tahira, Maria Gabriela Berzoti-Coelho, Sergio Verjovski-Almeida
+The CUT&RUN greenlist: genomic regions of consistent noise are effective normalizing factors for quantitative epigenome mapping
+Briefings in Bioinformatics, Volume 25, Issue 2, March 2024, bbad538
+DOI: 10.1093/bib/bbad538
+"""
+
+
+README = """
 ## Overview
 
-The repository contains the code, scripts, and methods for processing and analyzing CUT&RUN sequencing data using a novel **Greenlist normalization** strategy. This approach leverages specific genomic regions identified as consistent sources of noise across various CUT&RUN experiments, providing an effective and reproducible method for normalization. The Greenlist approach allows for more accurate quantification of chromatin features by reducing experimental biases.
 
-### Key Features:
-- Scripts for data processing and normalization of CUT&RUN data
-- Implementation of the Greenlist method for normalization
-- Tools to handle CUT&RUN sequencing outputs and statistical analysis
+This repository contains the code, scripts, and methods for processing and analyzing CUT&RUN sequencing data using a Greenlist normalization strategy. The approach leverages genomic regions identified as consistent sources of noise across various CUT&RUN experiments, providing a reproducible method for normalization and more accurate quantification of chromatin features.
+
+
+## Key Features
+
+
+- Scripts for processing and normalizing CUT&RUN data
+- Implementation of the Greenlist normalization method
+- Handling of CUT&RUN sequencing outputs and statistical analysis
+
 
 ## How to Use
 
-1. **Clone the Repository**:
-   To get started, clone this repository to your local machine:
 
-   ```bash
-   git clone https://github.com/apuhart/CUT-RUN.git
+### Clone the Repository
 
-2. **Scripts**:
-    The repository contains various scripts (.sh files) to process CUT&RUN data, perform Greenlist normalization, and analyze results. Modify the scripts as necessary for your specific dataset.
 
-4. **Running the Analysis**:
-    Ensure that your CUT&RUN sequencing data is prepared according to the formats supported by the scripts. The input typically consists of processed alignment files (e.g., BAM files).
+git clone https://github.com/apuhart/CUT-RUN-Greenlist.git
 
-5. **Output**:
-    After preparing the data, you can execute the provided shell scripts for analysis. The Greenlist normalization is integrated into the analysis pipeline, ensuring that noise is accounted for during the quantitative epigenome mapping process.
+
+### Running the Pipeline
+
+
+The main pipeline is executed via the run_pipeline.sh script. Run it as follows:
+
+
+bash run_pipeline.sh \
+-i "data" \
+-o "output" \
+-g "Homo_sapiens.GRCh38.dna.primary_assembly.fa"
+
+
+Where:
+- -i "data" specifies the folder containing your input CUT&RUN sequencing data
+- -o "output" specifies the folder where results will be written
+- -g specifies the reference genome
+
+
+Note: Ensure the data folder and reference genome are prepared as required. The output folder will be created if it does not exist.
+
 
 ## Citation
 
-If you use this repository or the Greenlist normalization method in your research, please cite the following paper:
 
-**Fabio N de Mello, Ana C Tahira, Maria Gabriela Berzoti-Coelho, Sergio Verjovski-Almeida**  
-_The CUT&RUN greenlist: genomic regions of consistent noise are effective normalizing factors for quantitative epigenome mapping_  
-**Briefings in Bioinformatics, Volume 25, Issue 2, March 2024**, bbad538  
-[DOI: 10.1093/bib/bbad538](https://doi.org/10.1093/bib/bbad538)
+Fabio N de Mello, Ana C Tahira, Maria Gabriela Berzoti-Coelho, Sergio Verjovski-Almeida
+The CUT&RUN greenlist: genomic regions of consistent noise are effective normalizing factors for quantitative epigenome mapping
+Briefings in Bioinformatics, Volume 25, Issue 2, March 2024, bbad538
+DOI: 10.1093/bib/bbad538
+
 
 ## License
 
-This repository is licensed under the MIT License. See the LICENSE file for more details.
+
+This repository is licensed under the MIT License. See the LICENSE file for details.
+"""
