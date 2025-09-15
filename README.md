@@ -47,12 +47,28 @@ bash run_pipeline.sh \
 
 
 Where:
-- -i "data" specifies the folder containing your input CUT&RUN sequencing data
+- -i "data" specifies the folder containing your input CUT&RUN sequencing data (.fq.gz)
 - -o "output" specifies the folder where results will be written
-- -g specifies the reference genome
+- -g specifies the reference genome (.fa)
 
 
 Note: Ensure the data folder and reference genome are prepared as required. The output folder will be created if it does not exist.
+
+Input File Naming Convention
+
+All input FASTQ files (.fq.gz) should be named using the format:
+
+condition_sampleX.fq.gz
+
+Where:
+
+    condition is either:
+
+        FA if the sample is a treatment
+
+        CTL if the sample is a control
+
+    sampleX is a unique name for each sample (e.g., sample1, sample2, etc.)
 
 
 ## Citation
