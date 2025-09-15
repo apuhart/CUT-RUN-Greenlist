@@ -1,7 +1,7 @@
 # CUT&RUN Analysis Repository
 
 
-"""
+
 This GitHub repository is dedicated to performing CUT&RUN (Cleavage Under Targets & Release Using Nuclease) analysis using the Greenlist normalization approach. This method is based on the work described in the paper:
 
 
@@ -9,10 +9,8 @@ Fabio N de Mello, Ana C Tahira, Maria Gabriela Berzoti-Coelho, Sergio Verjovski-
 The CUT&RUN greenlist: genomic regions of consistent noise are effective normalizing factors for quantitative epigenome mapping
 Briefings in Bioinformatics, Volume 25, Issue 2, March 2024, bbad538
 DOI: 10.1093/bib/bbad538
-"""
 
 
-README = """
 ## Overview
 
 
@@ -70,4 +68,4 @@ DOI: 10.1093/bib/bbad538
 
 
 This repository is licensed under the MIT License. See the LICENSE file for details.
-"""
+
